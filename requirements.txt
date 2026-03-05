@@ -1,0 +1,10 @@
+jax
+jaxlib
+flax
+optax
+datasets
+transformers
+matplotlib
+networkx
+pyyaml
+tqdm

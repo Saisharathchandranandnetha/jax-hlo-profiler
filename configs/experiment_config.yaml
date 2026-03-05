@@ -1,0 +1,55 @@
+experiment:
+  name: baseline_transformer
+  description: "Baseline transformer model profiling experiment"
+  seed: 42
+  debug: false
+
+profiling:
+  compile_profiling:
+    enabled: true
+    save_hlo: true
+    save_intermediate: false
+  
+  memory_profiling:
+    enabled: true
+    track_peak_memory: true
+    track_allocations: false
+  
+  runtime_profiling:
+    enabled: true
+    num_iterations: 100
+    warmup_iterations: 10
+
+optimization:
+  fusion_analysis:
+    enabled: true
+    fuse_operations: true
+  
+  buffer_analysis:
+    enabled: true
+    analyze_reuse: true
+
+compilation:
+  backend: cpu
+  optimization_level: 2
+  xla_flags:
+    - "xla_force_host_platform_device_count=8"
+    - "xla_dump_hlo_as_text=true"
+
+logging:
+  level: info
+  log_dir: ./profilings
+  save_metrics: true
+  save_logs: true
+
+visualization:
+  plot_results: true
+  plot_formats:
+    - png
+    - pdf
+  save_plots: true
+  plot_dir: ./results
+
+output:
+  results_dir: ./results/metrics
+  logs_dir: ./results/logs
