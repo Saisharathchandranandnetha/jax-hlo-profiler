@@ -98,7 +98,7 @@ jax-hlo-profiler
 
 Clone the repository:
 
-git clone https://github.com/your-username/jax-hlo-profiler.git  
+git clone https://github.com/Saisharathchandranandnetha/jax-hlo-profiler  
 cd jax-hlo-profiler
 
 Install dependencies:
@@ -190,3 +190,4 @@ This work builds upon open-source contributions from:
 - XLA Compiler
 - TensorFlow
 - ML Systems Research Community
+
